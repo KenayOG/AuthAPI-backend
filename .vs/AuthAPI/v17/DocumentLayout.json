@@ -1,0 +1,240 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|c:\\users\\angel\\onedrive\\escritorio\\uni-9-cuatrimestre\\dewein\\tercer parcial\\authapi\\authapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|solutionrelative:authapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|c:\\users\\angel\\onedrive\\escritorio\\uni-9-cuatrimestre\\dewein\\tercer parcial\\authapi\\authapi\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|solutionrelative:authapi\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|c:\\users\\angel\\onedrive\\escritorio\\uni-9-cuatrimestre\\dewein\\tercer parcial\\authapi\\authapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|solutionrelative:authapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|c:\\users\\angel\\onedrive\\escritorio\\uni-9-cuatrimestre\\dewein\\tercer parcial\\authapi\\authapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|solutionrelative:authapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|c:\\users\\angel\\onedrive\\escritorio\\uni-9-cuatrimestre\\dewein\\tercer parcial\\authapi\\authapi\\dtos\\roleassigndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|solutionrelative:authapi\\dtos\\roleassigndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|c:\\users\\angel\\onedrive\\escritorio\\uni-9-cuatrimestre\\dewein\\tercer parcial\\authapi\\authapi\\dtos\\roleresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|solutionrelative:authapi\\dtos\\roleresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|c:\\users\\angel\\onedrive\\escritorio\\uni-9-cuatrimestre\\dewein\\tercer parcial\\authapi\\authapi\\dtos\\createroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|solutionrelative:authapi\\dtos\\createroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|c:\\users\\angel\\onedrive\\escritorio\\uni-9-cuatrimestre\\dewein\\tercer parcial\\authapi\\authapi\\dtos\\userdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|solutionrelative:authapi\\dtos\\userdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|c:\\users\\angel\\onedrive\\escritorio\\uni-9-cuatrimestre\\dewein\\tercer parcial\\authapi\\authapi\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|solutionrelative:authapi\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|c:\\users\\angel\\onedrive\\escritorio\\uni-9-cuatrimestre\\dewein\\tercer parcial\\authapi\\authapi\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|solutionrelative:authapi\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|c:\\users\\angel\\onedrive\\escritorio\\uni-9-cuatrimestre\\dewein\\tercer parcial\\authapi\\authapi\\dtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|solutionrelative:authapi\\dtos\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|c:\\users\\angel\\onedrive\\escritorio\\uni-9-cuatrimestre\\dewein\\tercer parcial\\authapi\\authapi\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|solutionrelative:authapi\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|c:\\users\\angel\\onedrive\\escritorio\\uni-9-cuatrimestre\\dewein\\tercer parcial\\authapi\\authapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF5C6E92-8AFF-4BCC-93F4-8829E13E342E}|AuthAPI\\AuthAPI.csproj|solutionrelative:authapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "AuthAPI\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "AuthAPI\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAgwIIAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T00:28:21.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RolesController.cs",
+              "DocumentMoniker": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Controllers\\RolesController.cs",
+              "RelativeDocumentMoniker": "AuthAPI\\Controllers\\RolesController.cs",
+              "ToolTip": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Controllers\\RolesController.cs",
+              "RelativeToolTip": "AuthAPI\\Controllers\\RolesController.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAAAFsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T01:20:35.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Program.cs",
+              "RelativeDocumentMoniker": "AuthAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Program.cs",
+              "RelativeToolTip": "AuthAPI\\Program.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T23:55:02.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "AuthAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\appsettings.json",
+              "RelativeToolTip": "AuthAPI\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-18T01:14:23.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserDetailDto.cs",
+              "DocumentMoniker": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Dtos\\UserDetailDto.cs",
+              "RelativeDocumentMoniker": "AuthAPI\\Dtos\\UserDetailDto.cs",
+              "ToolTip": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Dtos\\UserDetailDto.cs",
+              "RelativeToolTip": "AuthAPI\\Dtos\\UserDetailDto.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAkAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T00:53:13.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RoleResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Dtos\\RoleResponseDto.cs",
+              "RelativeDocumentMoniker": "AuthAPI\\Dtos\\RoleResponseDto.cs",
+              "ToolTip": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Dtos\\RoleResponseDto.cs",
+              "RelativeToolTip": "AuthAPI\\Dtos\\RoleResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T01:25:53.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RoleAssignDto.cs",
+              "DocumentMoniker": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Dtos\\RoleAssignDto.cs",
+              "RelativeDocumentMoniker": "AuthAPI\\Dtos\\RoleAssignDto.cs",
+              "ToolTip": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Dtos\\RoleAssignDto.cs",
+              "RelativeToolTip": "AuthAPI\\Dtos\\RoleAssignDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T01:32:27.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Dtos\\LoginDto.cs",
+              "RelativeDocumentMoniker": "AuthAPI\\Dtos\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Dtos\\LoginDto.cs",
+              "RelativeToolTip": "AuthAPI\\Dtos\\LoginDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T00:42:48.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateRoleDto.cs",
+              "DocumentMoniker": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Dtos\\CreateRoleDto.cs",
+              "RelativeDocumentMoniker": "AuthAPI\\Dtos\\CreateRoleDto.cs",
+              "ToolTip": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Dtos\\CreateRoleDto.cs",
+              "RelativeToolTip": "AuthAPI\\Dtos\\CreateRoleDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T01:16:54.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Dtos\\AuthResponseDto.cs",
+              "RelativeDocumentMoniker": "AuthAPI\\Dtos\\AuthResponseDto.cs",
+              "ToolTip": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Dtos\\AuthResponseDto.cs",
+              "RelativeToolTip": "AuthAPI\\Dtos\\AuthResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T00:24:55.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Dtos\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "AuthAPI\\Dtos\\RegisterDto.cs",
+              "ToolTip": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Dtos\\RegisterDto.cs",
+              "RelativeToolTip": "AuthAPI\\Dtos\\RegisterDto.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T00:22:38.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "AuthAPI\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "AuthAPI\\Data\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T23:52:34.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Models\\AppUser.cs",
+              "RelativeDocumentMoniker": "AuthAPI\\Models\\AppUser.cs",
+              "ToolTip": "C:\\Users\\Angel\\OneDrive\\Escritorio\\UNI-9-CUATRIMESTRE\\DEWEIN\\TERCER PARCIAL\\AuthAPI\\AuthAPI\\Models\\AppUser.cs",
+              "RelativeToolTip": "AuthAPI\\Models\\AppUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T23:49:11.536Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
