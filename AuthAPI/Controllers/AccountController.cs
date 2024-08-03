@@ -1,13 +1,19 @@
 ﻿using AuthAPI.Dtos;
 using AuthAPI.Models;
+using Azure.Messaging;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using RestSharp;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq.Expressions;
+using System.Net;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace AuthAPI.Controllers
@@ -107,14 +113,236 @@ namespace AuthAPI.Controllers
             }
 
             var token = GenerateToken(user);
+            var refreshToken = GenerateRefreshToken();
+            _ = int.TryParse(_configuration.GetSection("JWTSettings").GetSection("RefreshTokenValidityIn").Value!, out int RefreshTokenValidityIn);
+            user.RefreshToken = refreshToken;
+            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddMinutes(RefreshTokenValidityIn);
+            await _userManager.UpdateAsync(user);
 
             return Ok(new AuthResponseDto
             {
                 Token = token,
                 IsSuccess = true,
-                Message = "Login Success"
+                Message = "Login Success",
+                RefreshToken = refreshToken,
             });
         }
+
+        [AllowAnonymous] // Permite invocar sin tener que autenticarse
+                         //api/account/login
+        [HttpPost("refresh-token")]
+        public async Task<ActionResult<AuthResponseDto>> RefreshToken(TokenDto tokenDto)
+        {
+
+            if (string.IsNullOrEmpty(tokenDto.Token) || string.IsNullOrEmpty(tokenDto.Email))
+            {
+                return BadRequest(new AuthResponseDto
+                {
+                    IsSuccess = false,
+                    Message = "Token or email cannot be null or empty."
+                });
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var principal = GetPrincipalFromExpiredToken(tokenDto.Token);
+            var user = await _userManager.FindByEmailAsync(tokenDto.Email);
+
+            if (principal is null || user is null || user.RefreshToken != tokenDto.RefreshToken || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
+                return BadRequest(new AuthResponseDto
+                {
+                    IsSuccess = false,
+                    Message = "Invalid client request holaaaa"
+                });
+
+            var newJwtToken = GenerateToken(user);
+            var newRefreshToken = GenerateRefreshToken();
+            _ = int.TryParse(_configuration.GetSection("JWTSettings").GetSection("RefreshTokenValidityIn").Value!, out int RefreshTokenValidityIn);
+            user.RefreshToken = newRefreshToken;
+            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddMinutes(RefreshTokenValidityIn);
+
+            await _userManager.UpdateAsync(user);
+
+            return Ok(new AuthResponseDto
+            {
+                IsSuccess = true,
+                Token = newJwtToken,
+                RefreshToken = newRefreshToken,
+                Message = "Refreshed token successfully "
+            });
+
+        }
+
+
+
+
+
+
+        private ClaimsPrincipal? GetPrincipalFromExpiredToken(string token)
+        {
+            if (string.IsNullOrEmpty(token))
+            {
+                throw new ArgumentNullException(nameof(token), "Token cannot be null or empty.");
+            }
+            //
+            var tokenParameters = new TokenValidationParameters
+            {
+                ValidateAudience = false,
+                ValidateIssuer = false,
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("JWTSetting").GetSection("securityKey").Value!)),
+                ValidateLifetime = false
+
+            };
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var principal = tokenHandler.ValidateToken(token, tokenParameters, out SecurityToken securityToken);
+
+            if (securityToken is not JwtSecurityToken jwtSecurityToken || !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase))
+            throw new SecurityTokenException("Invalid token");
+
+            return principal;
+        }
+
+
+
+
+
+
+
+
+
+        [AllowAnonymous]
+        [HttpPost("forgot-password")]
+        public async Task<ActionResult> ForgotPassword(ForgotPasswordDto forgotPasswordDTO)
+        {
+            var user = await _userManager.FindByEmailAsync(forgotPasswordDTO.Email);
+            if (user is null)
+            {
+                return Ok(new AuthResponseDto
+                {
+                    IsSuccess = false,
+                    Message = "User does not exist whit this mail"
+                });
+            }
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var resetLink = $"http://localhost:4200/reset-password?email={user.Email}&token={WebUtility.UrlEncode(token)}";
+
+            var client = new RestClient("https://sandbox.api.mailtrap.io/api/send/3058813");
+            var request = new RestRequest
+            {
+                Method = Method.Post,
+                RequestFormat = DataFormat.Json,
+            };
+
+
+
+            request.AddHeader("Authorization", "Bearer be4b8fc7084b3ee91a36badb7d364275");
+            request.AddJsonBody(new
+            {
+                from = new { email = "mailtrap@demomailtrap.com" },
+                to = new[] { new { email = user.Email } },
+                template_uuid = "bd9bbc2e-221d-4447-aede-5f9b241bee6a",
+                template_variables = new { user_email = user.Email, pass_reset_link = resetLink }
+            });
+
+            var response = client.Execute(request);
+            if (response.IsSuccessful)
+            {
+                return Ok(new AuthResponseDto
+                {
+                    IsSuccess = true,
+                    Message = "Email sent with password reset link, please check your email"
+                });
+            }
+            else
+            {
+                return BadRequest(new AuthResponseDto
+                {
+                    IsSuccess = false,
+                    Message = response.Content!.ToString()
+                });
+            }
+        }
+
+        [AllowAnonymous]
+        [HttpPost("reset-password")]
+        public async Task<IActionResult>ResetPassword(ResetPasswordDto resetPasswordDto)
+        {
+            //resetPasswordDto.Token = WebUtility.UrlDecode(resetPasswordDto.Token);
+            var user = await _userManager.FindByEmailAsync(resetPasswordDto.Email);
+            
+
+            if(user is null)
+            {
+                return BadRequest(new AuthResponseDto
+                {
+                    IsSuccess = false,
+                    Message = "User does not exist with this email"
+                });
+            }
+
+            var result = await _userManager.ResetPasswordAsync(user, resetPasswordDto.Token, resetPasswordDto.NewPassword);
+
+            if (result.Succeeded)
+            {
+                return Ok(new AuthResponseDto
+                {
+                    IsSuccess = true,
+                    Message = "Password reset Successfully"
+                });
+            }
+
+            return BadRequest(new AuthResponseDto
+            {
+                IsSuccess = false,
+                Message = result.Errors.FirstOrDefault()?.Description
+            });
+        }
+
+
+        [HttpPost("change-password")]
+        public async Task<ActionResult> ChangePassword(ChangePasswordDto changePasswordDto)
+        {
+            var user = await _userManager.FindByEmailAsync(changePasswordDto.Email);
+            if(user is null)
+            {
+                return BadRequest(new AuthResponseDto
+                {
+                    IsSuccess = false,
+                    Message = "User does not exist with this email"
+                });
+            }
+
+            var result = await _userManager.ChangePasswordAsync(user, changePasswordDto.CurrentPassword, changePasswordDto.NewPassword);
+            if (result.Succeeded)
+            {
+                return Ok(new AuthResponseDto
+                {
+                    IsSuccess = true,
+                    Message = "Password change"
+                });
+            }
+
+            return BadRequest(new AuthResponseDto
+            {
+                IsSuccess = false,
+                Message = result.Errors.FirstOrDefault()!.Description
+            });
+        }
+
+        private string GenerateRefreshToken()
+        {
+            var randomNumber = new byte[32];
+            using var rng = RandomNumberGenerator.Create();
+            rng.GetBytes(randomNumber);
+            return Convert.ToBase64String(randomNumber);
+        }
+
+
 
         private string GenerateToken(AppUser user)
         {
@@ -189,15 +417,64 @@ namespace AuthAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserDetailDto>>> GetUsers()
         {
-            var users = await _userManager.Users.Select(u => new UserDetailDto
+            try
             {
-                Id = u.Id,
-                Email = u.Email,
-                FullName = u.FullName,
-                Roles = _userManager.GetRolesAsync(u).Result.ToArray()
-            }).ToListAsync();
+                var users = await Task.Run(() =>
+                {
+                    var userList = _userManager.Users.Select(u => new UserDetailDto
+                    {
+                        Id = u.Id,
+                        Email = u.Email,
+                        FullName = u.FullName,
+                        Roles = _userManager.GetRolesAsync(u).Result.ToArray()
+                    }).ToListAsync();
 
-            return Ok(users);
+
+                    return userList;
+
+                });
+
+                return Ok(users);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (consider using a logging library)
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
         }
+
+
+        //api/account/
+        [HttpGet("all")]
+        public async Task<ActionResult<IEnumerable<UserDetailDto>>> GetUsersAll()
+        {
+            try
+            {
+                var users = await Task.Run(() =>
+                {
+                    var userList = _userManager.Users.Select(u => new UserDetailDto
+                    {
+                        Id = u.Id,
+                        Email = u.Email,
+                        FullName = u.FullName,
+                        Roles = _userManager.GetRolesAsync(u).Result.ToArray()
+                    }).ToListAsync();
+
+
+                    return userList;
+
+                });
+
+                return Ok(users);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (consider using a logging library)
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
+        }
+
     }
 }

@@ -46,7 +46,7 @@ namespace AuthAPI.Controllers
         }
 
 
-
+        
         [HttpGet]
         public async Task<ActionResult<IEnumerable<RoleResponseDto>>> GetRoles()
         {
